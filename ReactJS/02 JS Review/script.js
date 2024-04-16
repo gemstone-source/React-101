@@ -144,16 +144,25 @@ function getBook(id) {
 }
 
 // Destructuring
-const book = getBook(2);
+const book = getBook(1);
+
 // const title = book;
 // const author = book;
+
 const { title, author, pages, publicationDate, genres, hasMovieAdaptation } =
   book;
 
 console.log(title, author, genres);
 
 // const primaryGenre = genres[0];
-const secondaryGenre = genres[1];
+// const secondaryGenre = genres[1];
 
-const [primaryGenre, secondaryGenre] = genres;
-console.log(primaryGenre, secondaryGenre);
+const [primaryGenre, secondaryGenre, ...otherGenre] = genres;
+console.log(primaryGenre, secondaryGenre, otherGenre);
+
+//...genres will pull out all elements from genres array and append "Gemstone" with them in a single array
+const newGenres = [...genres, "Gemstone"];
+newGenres;
+
+const updatedBook = { ...book, publicationDate: "2000-12-19", pages: "1210" };
+updatedBook;
