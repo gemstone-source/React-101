@@ -2,7 +2,8 @@ name: "React 101 Sonarqube"
 on:
   # workflow_dispatch:
   push:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
   React101SonarQube:
