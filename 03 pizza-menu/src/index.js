@@ -58,11 +58,6 @@ function App() {
 }
 
 function Header() {
-  // const style = {
-  //   color: "red",
-  //   fontSize: "40px",
-  //   textTransform: "uppercase",
-  // };
   const style = {};
   return (
     <header className="header">
@@ -95,28 +90,12 @@ function Menu() {
       ) : (
         <p>We are still working on our menu. Please come back later :)</p>
       )}
-
-      {/* <Pizza
-        name="Pizza Spinaci"
-        ingredients="Tomato, mozarella, spinach, and ricotta cheese"
-        photoName="pizzas/spinaci.jpg"
-        price={10}
-      />
-
-      <Pizza
-        name="Pizza Funghi"
-        photoName="pizzas/funghi.jpg"
-        price={12}
-        ingredients="Tomato, mushrooms"
-      /> */}
     </main>
   );
 }
 
 function Pizza({ pizzaObj }) {
   console.log(pizzaObj);
-
-  // if (pizzaObj.soldOut) return null;
 
   return (
     <li className={`pizza ${pizzaObj.soldOut ? "sold-out" : ""}`}>
@@ -137,9 +116,6 @@ function Footer() {
   const isOpen = hour >= openHour && hour <= closeHour;
   console.log(isOpen);
 
-  // if (hour >= openHour && hour <= closeHour) alert("We are Currently open");
-  // else alert("We are Currently Closed");
-
   return (
     <footer className="footer">
       {isOpen ? (
@@ -151,7 +127,6 @@ function Footer() {
       )}
     </footer>
   );
-  // return React.createElement("footer", null, "We are Open!");
 }
 
 function Order({ closeHour, openHour }) {
