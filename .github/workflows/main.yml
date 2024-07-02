@@ -3,15 +3,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  React101SonarQube:
+  DemoSonarCloudScan:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
       - uses: actions/checkout@v4
         with:
           # Disabling shallow clones is recommended for improving the relevancy of reporting
           fetch-depth: 0
-
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@master # Ex: v2.1.0, See the latest version at https://github.com/marketplace/actions/official-sonarqube-scan
         env:
