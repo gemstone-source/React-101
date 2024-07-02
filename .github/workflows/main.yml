@@ -22,5 +22,5 @@ jobs:
           SONAR_HOST_URL: "https://sonarcloud.io/"
         with:
           args: >
-            -Dsonar.organization=hashghost
+            -Dsonar.organization=Hashghost
             -Dsonar.projectKey=hashghost
