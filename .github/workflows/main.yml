@@ -1,6 +1,7 @@
 name: "React 101 Sonarqube"
 on:
   # workflow_dispatch:
+
   push:
     branches:
       - main
@@ -9,18 +10,17 @@ jobs:
   DemoSonarCloudScan:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Source
+      - name: Checkout
         uses: actions/checkout@v4
-        # with:
-        #   # Disabling shallow clones is recommended for improving the relevancy of reporting
-        #   fetch-depth: 0
+        with:
+          # Disabling shallow clones is recommended for improving the relevancy of reporting
+          fetch-depth: 0
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@master # Ex: v2.1.0, See the latest version at https://github.com/marketplace/actions/official-sonarqube-scan
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: "https://sonarcloud.io/"
         with:
           args: >
-            -Dsonar.organization=Hashghost
+            -Dsonar.organization=hashghost
             -Dsonar.projectKey=hashghost
