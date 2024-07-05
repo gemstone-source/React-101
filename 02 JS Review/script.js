@@ -286,7 +286,7 @@ bookAfterUpdate;
 //   .then((res) => res.json())
 //   .then((data) => console.log(data));
 
-// console.log("Gemstone");
+console.log("Gemstone");
 
 async function getToDos() {
   const res = await fetch("https://jsonplaceholder.typicode.com/todos");
