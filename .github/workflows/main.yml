@@ -20,8 +20,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_KEY: ${{ secrets.SONAR_KEY }}
         with:
           args: >
-            -Dsonar.organization ${{ secrets.SONAR_KEY }}
-            -Dsonar.projectKey  $SONAR_KEY
+            -Dsonar.organization = ${{ secrets.SONAR_KEY }}
+            -Dsonar.projectKey = $SONAR_KEY
