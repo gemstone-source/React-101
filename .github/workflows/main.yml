@@ -23,5 +23,5 @@ jobs:
           SONAR_KEY: ${{ secrets.SONAR_KEY }}
         with:
           args: >
-            -Dsonar.organization = ${{ secrets.SONAR_KEY }}
+            -Dsonar.organization ${{ secrets.SONAR_KEY }}
             -Dsonar.projectKey = $SONAR_KEY
