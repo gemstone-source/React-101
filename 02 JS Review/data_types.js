@@ -4,9 +4,12 @@ function great() {
 }
 
 //function expression
-const speak = function () {
-  console.log("Speak");
+const speak = function (name = "javascript", time = "night") {
+  // console.log(`My name is ${name}`);
+  console.log(`Good ${time} ${name}`);
 };
 
-speak();
+//Calling function
 great();
+speak();
+// speak("javascript");
