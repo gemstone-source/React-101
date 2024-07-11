@@ -10,7 +10,8 @@ jobs:
   SonarCloudScan:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Version
+        uses: actions/checkout@v4
         with:
           # Disabling shallow clones is recommended for improving the relevancy of reporting
           fetch-depth: 0
@@ -19,7 +20,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_KEY: ${{secrets.SONAR_KEY}}
         with:
           args: >
-            -Dsonar.organization= ${{secrets.SONAR_KEY}}
-            -Dsonar.projectKey= ${{secrets.SONAR_KEY}}
+            -Dsonar.organization= $SONAR_KEY
+            -Dsonar.projectKey= $SONAR_KEY
