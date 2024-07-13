@@ -45,7 +45,7 @@ if (grade === "A") {
 
 let age = 30;
 
-if (true) {
+if (age == 40) {
   const age = 40;
   const name = "Gemstone";
   console.log("Am age from inside and I am: ", age, name);
