@@ -1,3 +1,7 @@
 {
-  "cSpell.words": ["Allbooks", "librarything", "Spinaci"]
+  "cSpell.words": ["Allbooks", "librarything", "Spinaci"],
+  "sonarlint.connectedMode.project": {
+    "connectionId": "hashghost",
+    "projectKey": "gemstone-source_React-101"
+  }
 }
