@@ -5,7 +5,6 @@ function great() {
 
 //function expression
 const speak = function (name = "javascript", time = "night") {
-  // console.log(`My name is ${name}`);
   console.log(`Good ${time} ${name}`);
 };
 
