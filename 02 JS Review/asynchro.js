@@ -24,11 +24,22 @@
 // });
 
 // Fetch
-fetch("https://jsonplaceholder.typicode.com/todos/").then((resp)=>{
-  console.log("Resolved",resp)
-  return resp.json()
-}).then((data)=>{
-  console.log(data)
-}).catch((err)=>{
-  console.log("Could not resolve data",err)
-})
+// fetch("https://jsonplaceholder.typicode.com/todos/")
+//   .then((resp) => {
+//     console.log("Resolved", resp);
+//     return resp.json();
+//   })
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((err) => {
+//     console.log("Could not resolve data", err);
+//   });
+
+const getTodos = async () => {
+  const response = await fetch("https://jsonplaceholder.typicode.com/todos/");
+  const data = await response.json();
+  return data;
+};
+
+getTodos();
