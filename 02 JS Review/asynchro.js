@@ -13,6 +13,9 @@ const getTodos = (callback) => {
   request.send();
 };
 
+console.log(1);
+console.log(2);
+
 getTodos((err, data) => {
   console.log("Callback fired");
   if (err) {
